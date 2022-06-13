@@ -15,8 +15,9 @@ type Arguments map[string]string
 const filePerm = 0600
 
 type Item struct {
-	Id, Email string
-	Age       int
+	Id    string `json:"id"`
+	Email string `json:"email"`
+	Age   int    `json:"age"`
 }
 
 func add(item, filename string, writer io.Writer) {
